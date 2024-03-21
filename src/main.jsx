@@ -1,13 +1,7 @@
-/* 
-
-import <nombre_variable> from "algun-archivo" 
-
-*/
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.scss'
-
 
 const root = document.getElementById('root')
 

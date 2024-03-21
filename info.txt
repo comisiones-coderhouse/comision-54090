@@ -1,0 +1,27 @@
+BEM : Es una metodologia de maquetacion (bloques, elementos, modificadores)
+
+
+
+css in jsx
+styled components
+tailwind
+
+bootstrap btn
+ant design 
+
+radix
+material ui
+stitches
+shadcns
+
+
+-----------------------------------------------
+
+Clase 4 : 
+
+Auto completador de clases de Tailwind : 
+https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
+
+
+
+diferencia entre tailwind y css 
