@@ -25,3 +25,17 @@ https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
 
 
 diferencia entre tailwind y css 
+
+
+
+https://mambaui.com/components
+
+
+const MiComponente = (props) => {
+
+}
+
+
+<MiComponente unProp="valor">
+    <p>Hola</p>
+</MiComponente>

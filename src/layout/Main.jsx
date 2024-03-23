@@ -1,17 +1,16 @@
-import { Button } from 'antd'
+/* import { Button } from 'antd' */
+import Page from '../Page'
 import UserCard from '../UserCard'
 
 function Main() {
     return (
-        <main className='p-4 grow'>
-            <h2>Home</h2>
-            <Button>soy un boton</Button>
+        <Page title="Home">
             <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 users">
                 <UserCard name="pedro" />
                 <UserCard name="Ana" />
                 <UserCard name="Claudia" />
             </section>
-        </main>
+        </Page>
     )
 }
 
