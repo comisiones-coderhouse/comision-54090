@@ -1,41 +1,23 @@
-BEM : Es una metodologia de maquetacion (bloques, elementos, modificadores)
+Links de interes : 
+
+
+- tailwind : https://tailwindcss.com/docs
+- tailwind en vite : https://tailwindcss.com/docs/guides/vite
+- Auto completador de clases de Tailwind : https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
+
+- ant design : https://ant.design
+
+- lucide-react (iconos) : https://lucide.dev
 
 
 
-css in jsx
-styled components
-tailwind
 
-bootstrap btn
-ant design 
+- Componentes Tailwind 1 : https://mambaui.com/components
+- Componentes Tailwind 2 : https://tailblocks.cc/
+- Componentes Tailwind 3 (para AI) : https://www.langui.dev/components
+- Componentes Tailwind 4 : https://kitwind.io/products/kometa/components
+- Componentes Tailwind 5 : https://merakiui.com/components
 
-radix
-material ui
-stitches
-shadcns
-
-
------------------------------------------------
-
-Clase 4 : 
-
-Auto completador de clases de Tailwind : 
-https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
-
-
-
-diferencia entre tailwind y css 
-
-
-
-https://mambaui.com/components
-
-
-const MiComponente = (props) => {
-
-}
-
-
-<MiComponente unProp="valor">
-    <p>Hola</p>
-</MiComponente>
+- Extension VsCode React 1 : https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
+- Extension VsCode React 2 : https://marketplace.visualstudio.com/items?itemName=rodrigovallades.es7-react-js-snippets
+- Extension Tailwind (autocomplete) : https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
