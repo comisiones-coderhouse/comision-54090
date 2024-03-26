@@ -21,3 +21,53 @@ Links de interes :
 - Extension VsCode React 1 : https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets
 - Extension VsCode React 2 : https://marketplace.visualstudio.com/items?itemName=rodrigovallades.es7-react-js-snippets
 - Extension Tailwind (autocomplete) : https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss
+
+
+- https://github.com/streamich/react-use
+
+
+
+
+
+
+Estados : Son variables "reactivas", es decir que si se modifica su valor, react "reacciona" a este cambio y vuelve a dibujarlas en pantalla
+
+Hook : Son funciones que nos permiten incorporar nuevas funcionalidades en un componente
+
+useState : El hook useState nos permite manejar estados de estado en React. Cada vez que se ejectua nos da UNA variable de estado. El hook en si retorna SIEMPRE un array con dos cosas dentro. El primer elemento es el valor de la variable de estado, y el segundo es una función que nos permite cambiar el valor de la variable de estado.
+
+
+useRef
+useEffect
+useContext
+
+
+
+DESTRUCTURING : 
+
+const arr = [1,2,3]
+
+const uno = arr[0]
+const dos = arr[1]
+const tres = arr[2]
+
+const [uno,dos,tres] = arr
+
+
+
+
+const obj = { name:"Horacio", age : 34 }
+
+const name = obj.name
+const age = obj.age
+
+const {name : name , age : age} = obj
+const {name, age} = obj
+
+
+
+OBJECT PROPERTY SHORTHAND :
+
+const nombre = "horacio"
+
+const persona = { nombre }
