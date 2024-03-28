@@ -71,3 +71,97 @@ OBJECT PROPERTY SHORTHAND :
 const nombre = "horacio"
 
 const persona = { nombre }
+
+
+
+
+
+Promesas y Maps 
+
+
+const nombres = ["horacio","juan","pedro"]
+
+
+const unValor = nombres.forEach((item,i)=>{
+
+})
+
+
+nombres.map((item,i)=>{
+
+})
+
+/* const nombres = [
+    {
+        name : "Pedro",
+        salary : 1000
+    },
+    {
+        name : "Juan",
+        salary : 2000
+    },
+    {
+        name : "Maria",
+        salary : 3000
+    }
+]
+
+
+const unValor = nombres.forEach((item,i)=>{
+    console.log(item,i)
+})
+
+const otroValor = nombres.map((item,i)=>{
+    //console.log(item,i)
+    return {
+        name : item.name,
+        salary : item.salary + 100
+    }
+})
+
+console.log(unValor)
+console.log(otroValor)
+ */
+
+
+
+const obj = {
+    then : () => {},
+    catch : () => {},
+    finally : () => {}
+}
+
+
+
+const respuesta = caches.open() //=> Promise
+const respuesta = fetch("/users") //=> Promise
+
+caches.open()
+.then()
+.catch()
+.finally()
+
+fetch("/users")
+.then()
+.catch()
+.finally()
+
+
+
+
+hagan un Mock Async en un efecto a 2 segundos
+
+
+const miPromesa = new Promise((res, rej) => { 
+    console.log("Pidiendo...")
+    setTimeout(()=>{
+        res()
+    },5000)
+})
+
+miPromesa.then(() => { console.log("Bien") })
+
+miPromesa.catch(() => { console.log("Mal") })
+
+miPromesa.finally(() => { console.log("Finalizo") })
+
