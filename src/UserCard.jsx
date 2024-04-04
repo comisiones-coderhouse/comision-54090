@@ -1,5 +1,5 @@
 import { Button } from "antd";
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 function UserCard({ name }) {
 
@@ -8,16 +8,6 @@ function UserCard({ name }) {
     function handleClick() {
         setNombre("Carlos")
     }
-
-    /* useEffect(function) */
-    /* useEffect(function,[]) */
-
-    /* useEffect(() => {
-        window.addEventListener("resize", () => {
-            console.log("width", window.innerWidth)
-        })
-    }, []) */
-
 
     return (
         <div className="p-4 transition rounded-md shadow-md user-card hover:scale-105 group">

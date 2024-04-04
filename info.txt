@@ -26,7 +26,9 @@ Links de interes :
 - https://github.com/streamich/react-use
 
 
-
+- Listado de APIs : https://github.com/public-apis/public-apis
+https://rickandmortyapi.com/documentation
+https://developer.marvel.com/docs
 
 
 
@@ -165,3 +167,11 @@ miPromesa.catch(() => { console.log("Mal") })
 
 miPromesa.finally(() => { console.log("Finalizo") })
 
+
+
+
+API : Interfaz de programación de aplicaciones (API)
+
+API REST : 
+API WEB : 
+SOAP : 
