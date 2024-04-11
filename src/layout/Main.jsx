@@ -1,38 +1,28 @@
-import Page from '../Page'
-import UserCard from '../UserCard'
-
-import "./fetch-demo"
-
+import { Routes, Route } from 'react-router-dom'
+import Home from '../pages/Home'
+import Personajes from '../pages/Personajes'
+import Contacto from '../pages/Contacto'
+import PersonajeContainer from '../pages/PersonajeContainer'
 
 function Main() {
-
-    /* const users = ["Horacio", "Carlos", "Ana", "Claudia", "Eddy"] */
-
-    let characters;
-
-    fetch("https://rickandmortyapi.com/api/character")
-        .then((res) => {
-            return res.json()
-        })
-        .then((res) => {
-            //console.log(res.results)
-            characters = res.results
-            /* res.results.forEach((character)=>{
-                console.log(character)
-            }) */
-        })
-        .catch((err) => {
-            console.log(err)
-        })
-
     return (
-        <Page title="Home">
-            <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 users">
-                {characters.map((user, i) => {
-                    return <UserCard key={i} name={user} />
-                })}
-            </section>
-        </Page>
+        <main className='p-4 text-white grow mi-main bg-slate-600'>
+            <Routes>
+
+                <Route path='/' element={<Home/>} />
+
+                <Route path='/characters' element={<Personajes/>} />
+
+                {/* /characters/1  - /characters/2  - /characters/3 */}
+                <Route path="/characters/:id" element={<PersonajeContainer/>}/>
+
+                <Route path='/contact' element={<Contacto/>} />
+
+                {/* /horacio  - /personajes/73428949 - / */}
+                <Route path="*" element={<p>No encontrado</p>} />
+
+            </Routes>
+        </main>
     )
 }
 

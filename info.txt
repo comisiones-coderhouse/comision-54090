@@ -172,6 +172,98 @@ miPromesa.finally(() => { console.log("Finalizo") })
 
 API : Interfaz de programación de aplicaciones (API)
 
-API REST : 
-API WEB : 
-SOAP : 
+
+
+
+1) Containers y Presentacionales
+
+Los containers : Son componentes que tienen un estado interno y una UI intermedia. Es decir que no tienen un DOM propio y manejan algun tipo de informacion conseguida y tienen logicas mas fueres, como metodos internos, eventos internos, condicionales de validaciones ,etc. Siempre un componente de este tipo va a pasar su informacion hacia un presentacional
+
+Los presentacionales : Son componentes por lo general no suelen tener logica, es decir que podrian no tener estado interno, ni metodos, sino mas bien toda la informacion que necesitan viene de un componente padre (container). Estos componentes por lo general van a recibir props y los van a querer mostrar en pantalla. Estos componentes suelen trabajar el DOM. 
+
+2) Hooks y patrones de diseño (HoC)
+3) Destructuring , REST/SPREAD/ , Operador Ternario
+
+
+MANUAL DE PROMESAS : 
+1) Si tengo una promesa y NO ESTA dentro de un .then()
+ entonces le pongo uno (.then) a coninuacion
+2) Si tengo una promesa y ESTA dentro de un .then()
+  entonces NO le pongo otro (.then) a coninuacion sino que la retorno y continuo abajo del ULTIOMO the. que aparezca
+
+
+
+
+fetch(url string , config object)
+.then((respuesta)=>{
+    respuesta.json()
+})
+.catch((error)=>{})
+
+
+
+
+
+fetch("miapi.com/users")
+.then((respuesta)=>{
+    return respuesta.json()
+})
+.then((usuarios)=>{
+    const userId = usuarios[50].id
+    return fetch("miapi.com/posts")
+})
+.then((respuesta)=>{
+    return respuesta.json()
+})
+.then((posteos)=>{
+    const postId = posteos[50].id
+    return fetch("miapi.com/comments")
+})
+.then((respuesta)=>{
+    return respuesta.json()
+})
+.then((comentarios)=>{
+    
+})
+.catch(()=>{})
+
+
+
+
+
+
+
+
+fetch("miapi.com",{
+    method : "POST",
+})
+.then((respuesta)=>{
+    respuesta.json()
+})
+
+
+
+
+
+
+function Counter(){
+    const [count, setCount] = useState(0)
+
+    const increment = () => setCount(count + 1)
+
+    const decrement = () => setCount(count - 1)
+
+    const reset = () => setCount(0)
+
+    return (
+        <div>
+            ....
+        </div>
+    )
+}
+
+
+
+<section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 users">
+                <UserCardContainer/>
+            </section> 
