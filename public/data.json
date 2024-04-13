@@ -1,0 +1,13 @@
+[
+    {
+        "id": 1,
+        "name": "Pc Lenovo",
+        "image": "/imagenes/pc1.jpg"
+
+    },
+    {
+        "id": 2,
+        "name": "PC HP",
+        "image" : "/imagenes/pc2.jpg"
+    }
+]

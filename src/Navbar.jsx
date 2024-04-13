@@ -10,6 +10,10 @@ function Navbar() {
                 <Link to="/">home</Link>
 
                 <Link to="/characters">personajes</Link>
+
+                <Link to="/category/Human">humanos</Link>
+
+                <Link to="/category/Alien">aliens</Link>
                 
                 <Link to="/contact">contacto</Link>
                 

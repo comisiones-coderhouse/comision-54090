@@ -9,7 +9,7 @@ function Header() {
 
             <Routes>
                 <Route path="/characters" element={
-                    <input type="text" placeholder="Busca un personaje" />
+                    <input type="text" placeholder="Busca un personaje" className="p-2 rounded-md"/>
                 } />
             </Routes>
 

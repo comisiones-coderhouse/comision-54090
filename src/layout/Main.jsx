@@ -12,6 +12,9 @@ function Main() {
                 <Route path='/' element={<Home/>} />
 
                 <Route path='/characters' element={<Personajes/>} />
+                
+                <Route path='/category/:categoria' element={<Personajes/>} />
+                {/* <Route path='/aliens' element={<Personajes/>} /> */}
 
                 {/* /characters/1  - /characters/2  - /characters/3 */}
                 <Route path="/characters/:id" element={<PersonajeContainer/>}/>

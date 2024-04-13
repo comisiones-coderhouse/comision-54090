@@ -1,6 +1,7 @@
 import UserCardContainer from "../UserCardContainer"
 
 function Personajes() {
+
     return (
         <div>
             <h2>Personajes</h2>
