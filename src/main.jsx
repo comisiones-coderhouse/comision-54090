@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import App from './components/layout/App'
 import './index.scss'
+import "./firebase.js"
 
 const root = document.getElementById('root')
 

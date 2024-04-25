@@ -16,14 +16,6 @@ function PersonajeContainer() {
             .then((personaje) => {
                 setCharacter(personaje)
             })
-        /* 
-        const miPromesa = new Promise((res, rej) => {
-            console.log("Pidiendo...")
-            setTimeout(() => {
-                res()
-            }, 5000)
-        }) 
-        */
     }, []);
 
     return (

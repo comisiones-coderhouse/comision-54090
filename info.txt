@@ -267,3 +267,244 @@ function Counter(){
 <section className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 users">
                 <UserCardContainer/>
             </section> 
+
+
+
+
+
+            /*
+Eventos
+
+const btn = document.getElementById("btn")
+
+function handleClick(evt) {
+    console.log("click")
+    console.log(evt)
+    evt.target
+    evt.preventDefault()
+    evt.stopPropagation()
+}
+
+btn.addEventListener("click", () => console.log("click"))
+btn.addEventListener("click", function (){ console.log("click") })
+btn.addEventListener("click", handleClick)
+btn.addEventListener("click", handleClick())
+
+*/
+
+
+
+function Home() {
+
+    const handleClick = (e) => {
+        /* e.preventDefault() */
+        /* console.log(e.target.tagName) */
+        /* console.log(e)
+        console.log("click") */
+    }
+
+    const handleChange = (e) => {
+        /* console.log(e)
+        console.log("change") */
+    }
+
+    const handleMouseEnter = (e) => {
+        /* console.log(e)
+        console.log("mouse enter") */
+    }
+
+    const handleKeyDown = (e) => {
+        /* console.log(e) */
+        /* console.log(e.key) */
+        if(e.key == "a"){
+            e.preventDefault()
+        }
+        /* console.log("key down") */
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        /* console.log(e)
+        console.log("submit") */
+    }
+
+    const handleDivClick = (e) => {
+        console.log(e.target)
+    }
+
+    return (
+        <div onClick={handleDivClick}>
+            <h2>Home</h2>
+            <div onMouseEnter={handleMouseEnter}>
+                <button onClick={(e) => console.log(e)}>click 1</button>
+                <button onClick={function (e) { console.log(e) }}>click 2</button>
+                <button onClick={handleClick}>click 3</button>
+                {/* <button onClick={handleClick()}>click 3</button> */}
+            </div>
+            <form onSubmit={handleSubmit}>
+
+                <input onChange={handleChange} type="text" placeholder="Nombre" className="text-black" />
+                
+                <input onKeyDown={handleKeyDown} type="text" placeholder="Edad" className="text-black" />
+
+                <button>enviar</button>
+
+            </form>
+
+            <a href="https://www.google.com" onClick={handleClick}>ir a google</a>
+        </div>
+    )
+}
+
+export default Home
+
+
+
+
+
+
+
+
+import { useEffect, useState } from "react"
+
+function Home() {
+
+    const [value, setValue] = useState("")
+
+    const handleChange = (e) => {
+        //console.log("change")
+        //si la longitud de caracteres del valor del input es menor a 5 que se vea un mensaje de error en pantalla
+        //const input = document.querySelector("input")
+        const input = e.target
+        const valor = input.value
+        setValue(valor)
+    }
+
+    return (
+        <div>
+            <input type="text" onChange={handleChange} className="text-black" placeholder="Nombre" />
+            {/* {if(value.length < 5){<p>El nombre debe ser mayor a 5 caracteres</p>}} */}
+            {/* {value.length < 5 ? <p>El nombre debe ser mayor a 5 caracteres</p> : null} */}
+            {value.length < 5 && <p>El nombre debe ser mayor a 5 caracteres</p>}
+        </div>
+    )
+}
+
+export default Home
+
+
+
+
+
+import { useState } from "react"
+import Contador from "../Contador"
+
+const Home = () => {
+
+    const [confirmado, setConfirmado] = useState(false)
+    const [cant, setCant] = useState(0)
+
+    const onConfirm = (cantidadConfirmada) => {
+        console.log("Soy on confirm")
+        console.log(cantidadConfirmada)
+        setCant(cantidadConfirmada)
+        setConfirmado(true)
+    }
+
+    return (
+        <>
+            { confirmado ? <input/> : <Contador onConfirm={onConfirm}/>}
+        </>
+    )
+}
+
+export default Home
+
+
+
+
+
+
+
+
+State Uplifting : "Es el concepto opuesto a un prop"
+
+ComponentePadre -> props -> ComponenteHijo
+ComponentePadre <- props <- ComponenteHijo
+
+Para que un componente hijo que tiene informacion (estado, algo que consiguio de una api, de un evento, etc...) se la pase al componente padre : 
+
+1) en el padre crear un metodo
+2) pasarselo como prop al hijo
+3) recibirlo en el componente hijo 
+4) usar el prop con un evento
+5) Le mando como parametro a este prop la info que consegui
+6) Opcional : Una vez que recibo esos valores en el componente padre, los almaceno
+
+
+src/
+   |_components/
+        |_layout/
+            |_App.jsx
+            |_Header.jsx
+            |_Footer.jsx
+            |_NavBar.jsx
+            |_Main.jsx
+        |_pages/
+            |_ProductListContainer.jsx
+            |_ProductDetailContainer.jsx
+            |_Cart.jsx
+        |_widgets/
+            |_Button.jsx
+            |_Input.jsx
+            |_CartWidget.jsx
+            |_Popup.jsx
+            |_ProductList.jsx
+            |_Product.jsx
+            |_ProductDetail.jsx
+    |_main.jsx
+    |_index.html
+    |_index.css
+
+
+
+
+PASO A PASO : IMPLEMENTAR CONTEXT y PROVIDER EN UNA APP
+
+1) Creo el contexto, lo pongo en una variable
+2) Le saco el Provider al contexto que cree, lo pongo en una variable
+3) Me creo un componente aparte, por lo general se va a llamar AlgoProvider
+4) Meto el Provider del paso 2 dentro del componente que cree en paso 3
+5) Integro mi componente del paso 3 con el resto de la applicacion usando los props children
+    console.log(props)
+6) Configuro el prop value del Provider del contexto con un valor. Este valor va a ser el valor del contexto. 
+7) Asocio algun valor en el contexto con un estado
+8) Ya podria acceder al valor del contexto desde cualquier componente hijo : 
+9) Importo el hook useContext
+10) Importo el contexto que cree en paso 1
+11) Uso el contexto como parametro del hook. Esto me da de retorno el valor del contexto. 
+
+
+
+Firebase : Plataforma de google que nos da distintos servicios para desarrollo web como bases de datos, almacenamiento, autenticacion, etc
+
+https://firebase.google.com/
+
+
+
+CRUD / ABM
+
+CURD : Create, Read, Update, Delete
+ABML : Alta, Baja, Modificacion, Listado
+Firestore : getDocs/getDoc , addDoc , updateDoc , deleteDoc
+
+import { 
+    getFirestore, 
+    collection, 
+    getDocs, 
+    addDoc, 
+    doc, 
+    updateDoc,
+    query,
+    where
+ } from "firebase/firestore"
