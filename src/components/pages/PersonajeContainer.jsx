@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import Personaje from "./Personaje";
+import { getProductDetail } from "../../utils";
 
 
 function PersonajeContainer() {
@@ -9,13 +10,10 @@ function PersonajeContainer() {
     const [character, setCharacter] = useState({})
 
     useEffect(() => {
-        fetch("https://rickandmortyapi.com/api/character/" + id)
-            .then((res) => {
-                return res.json()
-            })
-            .then((personaje) => {
-                setCharacter(personaje)
-            })
+        getProductDetail(id)
+        .then((resultado)=>{
+            setCharacter(resultado)
+        })
     }, []);
 
     return (

@@ -12,8 +12,6 @@ function CarritoProvider(props) {
 
 
     const agregarAlCarrito = (cant, item) => {
-        console.log("agregando")
-        console.log(cant, item)
         setCantCarrito(cantCarrito + cant)
         //carrito.push(item)
         //Cuando el estado es un array/objeto se tiene que copiar primero
@@ -23,7 +21,10 @@ function CarritoProvider(props) {
         /* const copia = carrito.slice(0)
         copia.push(item)
         setCarrito(copia) */
-        copia.push(item)
+        const productoConCantidad = item
+        productoConCantidad.cantidad = cant
+
+        copia.push(productoConCantidad)
         /* setCarrito([...carrito, item]) */
         setCarrito(copia)
     }
