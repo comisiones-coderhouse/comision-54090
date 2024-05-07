@@ -508,3 +508,37 @@ import {
     query,
     where
  } from "firebase/firestore"
+
+
+
+
+
+
+Documentacion :
+
+- Breve descripcion de la app
+- Tecnologias utilizadas
+- Uso de la app
+
+
+
+Variables de entorno : Son variables que se guardan en el proceso que se esta ejecutando y que se pueden acceder desde cualquier parte de la aplicacion. 
+
+.env
+.env.local
+
+console.log(process.env.mi_variable)
+
+
+npm install dotenv
+
+require("dotenv").config()
+
+import dotenv from "dotenv"
+dotenv.config()
+
+
+BUILD Y DEPLOY 
+
+netlify
+vercel

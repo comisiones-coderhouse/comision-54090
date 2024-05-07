@@ -11,15 +11,18 @@ function UsersCardContainer() {
 
     useEffect(() => {
         
-        /* getProducts()
-        .then((resultado)=>{
-            setCharacters(resultado)
-        }) */
+        if(params.categoria) {
+            getProductsFromCategories(params.categoria)
+            .then((resultado)=>{
+                setCharacters(resultado)
+            })
+        } else {
+            getProducts()
+            .then((resultado)=>{
+                setCharacters(resultado)
+            })
+        }
 
-        getProductsFromCategories(params.categoria)
-        .then((resultado)=>{
-            setCharacters(resultado)
-        })
 
     }, [params.categoria])
 
@@ -30,4 +33,5 @@ function UsersCardContainer() {
         </div>
     )
 }
+
 export default UsersCardContainer
